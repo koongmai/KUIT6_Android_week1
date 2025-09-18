@@ -10,9 +10,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -187,9 +187,9 @@ fun ProfileCard(
                 painter = painterResource(R.drawable.kuit),
                 contentDescription ="쿠잇 로고",
                 modifier = Modifier
-                    .size(40.dp)
                     .align(Alignment.TopEnd)
-                    .padding(top = 10.dp, end = 10.dp)
+                    .offset(x = (-10).dp, y = 10.dp)
+                    .size(40.dp)
                     .clip(shape = RoundedCornerShape(size = 10.dp)),
                 contentScale = ContentScale.Fit  // 원본 비율 유지
 
@@ -225,7 +225,8 @@ fun ProfileCard(
                 Text(
                     text = "학번 : 202412357",
                     fontFamily = inter,
-                    fontSize = 8.sp
+                    fontSize = 8.sp,
+                    modifier = Modifier.padding(top = 4.dp)
                 )
                 Text(
                     text = "학과 : 컴퓨터공학부",
@@ -244,7 +245,7 @@ fun ProfileCard(
     }
 }
 
-
+/*
 @Preview(showBackground = true)
 @Composable
 private fun SamplePreview() {
@@ -266,7 +267,7 @@ private fun ModifierOrderExamplePreview1() {
 private fun ModifierOrderExamplePreview2() {
     ModifierOrderExample2()
 }
-
+*/
 @Preview(showBackground = true)
 @Composable
 private fun ProfileCardPreview(){
