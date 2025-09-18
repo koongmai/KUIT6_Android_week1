@@ -169,6 +169,7 @@ fun ModifierOrderExample2() {
     )
 }
 
+
 @Composable
 fun ProfileCard(
 ) {
@@ -210,7 +211,7 @@ fun ProfileCard(
                 modifier= Modifier
                     .fillMaxWidth()
                     .padding(start = 10.dp, top = 64.dp),
-                    verticalArrangement = Arrangement.spacedBy(6.dp) // 줄 간격
+                    verticalArrangement = Arrangement.spacedBy(5.dp)
             ){
                 val inter = FontFamily(
                 Font(R.font.inter)
